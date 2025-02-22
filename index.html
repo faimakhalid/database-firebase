@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive User Form</title>
+    <style>
+          body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 35px;
+            width: 100%;
+            max-width: 420px;
+            margin: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .form-container:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        label {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            text-align: left;
+        }
+        input, select, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input, select {
+            background: rgba(255, 255, 255, 0.4);
+            color: #fff;
+            outline: none;
+            transition: 0.3s;
+            border: 1px solid #fff;
+        }
+        input::placeholder {
+            color: #eee;
+        }
+        input:focus, select:focus {
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+        button {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background: linear-gradient(135deg, #dd2476, #ff512f);
+            transform: scale(1.08);
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            label, input, select {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>User Form</h2>
+
+        <form id="userForm">
+            <label for="username">Categories:</label>
+            <input type="text" id="nameInput" required>
+
+            <label for="username">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="phonenumber">Number:</label>
+            <input type="text" id="number" required>
+
+            <label for="email">email:</label>
+            <input type="text" id="email" required>
+            
+
+            <button type="submit" id="Submit">Submit</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+
+
+
+<script type="module" src="script.js"></script>
+
+
+</body>
+</html>
